@@ -1,3 +1,4 @@
+love.window.setTitle("Lek and the stupid dungeon")
 function love.load()
     player = {}
     player.x = 400
