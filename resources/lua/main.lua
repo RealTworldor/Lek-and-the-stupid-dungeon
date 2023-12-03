@@ -1,7 +1,7 @@
 function love.load()
     player = {}
     player.x = 400
-    player.y = 200
+    player.y = 300
 end
 
 function love.update(dt)
