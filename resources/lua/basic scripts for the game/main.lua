@@ -3,11 +3,31 @@ function love.load()
     player = {}
     player.x = 400
     player.y = 300
+    player.speed = 4
 end
 
-function love.update()
+function love.update(dt)
+    if love.keyboard.isDown("right") then
+        player.x = player.x + player.speed
+    end
+    
+    if love.keyboard.isDown("left") then
+        player.x = player.x - player.speed
+    end
+
+    if love.keyboard.isDown("up") then
+        player.y = player.y - player.speed
+    end
+
+    if love.keyboard.isDown("down") then 
+        player.y = player.y + player.speed
+    end
+
+    if love.keyboard.isDown("escape") then
+        love.window.close()
+      end
 end
 
 function love.draw()
-    love.graphics.circle("fill", player.x, player.y, 50)
+    love.graphics.circle("fill", player.x, player.y, 45)
 end
