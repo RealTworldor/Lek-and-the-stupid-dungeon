@@ -1,4 +1,5 @@
 love.window.setTitle("Lek and the stupid dungeon")
+local walkingSound = love.audio.newSource("walk.wav", "static")
 function love.load()
     player = {}
     player.x = 400
