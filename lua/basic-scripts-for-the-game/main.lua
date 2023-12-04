@@ -1,10 +1,11 @@
 love.window.setTitle("Lek and the stupid dungeon")
-local walkingSound = love.audio.newSource("audio/walk.wav", "static")
 function love.load()
     player = {}
     player.x = 400
     player.y = 300
     player.speed = 5
+    sounds = {}
+    sounds.walk = love.audio.newSource("audio/walk.wav", "static")
 end
 
 function love.update(dt)
@@ -20,7 +21,7 @@ function love.update(dt)
         player.y = player.y - player.speed
     end
 
-    if love.keyboard.isDown("down") then ~
+    if love.keyboard.isDown("down") then
         player.y = player.y + player.speed
     end
 
